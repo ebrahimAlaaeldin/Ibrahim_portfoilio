@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Github, Linkedin, Twitter, Download, Code, Database, Brain, Zap, Shield, Globe, BarChart3 } from 'lucide-react';
+import { Mail, Github, Linkedin, Twitter, Download, Code, Database, Brain, Zap, Shield, Globe } from 'lucide-react';
 
 export default function App() {
   const [currentPhrase, setCurrentPhrase] = useState('');
@@ -137,68 +137,84 @@ export default function App() {
             </p>
 
             {/* Skills */}
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-gray-900 flex items-center gap-2">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+              <div className="space-y-4 bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-lg font-semibold text-gray-900 flex items-center gap-2 border-b border-gray-200 pb-2">
                   <Code className="text-blue-600" size={24} />
-                  Backend Skills
+                  Programming Languages
                 </h3>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">Spring Boot / REST APIs</span>
-                    <span className="text-blue-600 font-semibold">88%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div className="bg-blue-600 h-2 rounded-full" style={{ width: '88%' }}></div>
-                  </div>
-                  
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">JWT • Hibernate/JPA</span>
-                    <span className="text-blue-600 font-semibold">84%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div className="bg-blue-600 h-2 rounded-full" style={{ width: '84%' }}></div>
-                  </div>
-                  
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">MySQL / PostgreSQL</span>
-                    <span className="text-blue-600 font-semibold">85%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div className="bg-blue-600 h-2 rounded-full" style={{ width: '85%' }}></div>
-                  </div>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Java</span>
+                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Python</span>
+                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">SQL</span>
+                  <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">HTML5</span>
+                  <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">CSS3</span>
+                  <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                  <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">R</span>
                 </div>
               </div>
 
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-gray-900 flex items-center gap-2">
+              <div className="space-y-4 bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-lg font-semibold text-gray-900 flex items-center gap-2 border-b border-gray-200 pb-2">
+                  <Database className="text-blue-600" size={24} />
+                  Backend & Frameworks
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Spring Boot</span>
+                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">REST APIs</span>
+                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">JWT Auth</span>
+                  <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Hibernate/JPA</span>
+                  <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Vue.js</span>
+                  <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Bootstrap</span>
+                </div>
+              </div>
+
+              <div className="space-y-4 bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-lg font-semibold text-gray-900 flex items-center gap-2 border-b border-gray-200 pb-2">
                   <Brain className="text-blue-600" size={24} />
                   AI & Data Science
                 </h3>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">Machine Learning</span>
-                    <span className="text-blue-600 font-semibold">82%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div className="bg-blue-600 h-2 rounded-full" style={{ width: '82%' }}></div>
-                  </div>
-                  
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">Data Analysis</span>
-                    <span className="text-blue-600 font-semibold">78%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div className="bg-blue-600 h-2 rounded-full" style={{ width: '78%' }}></div>
-                  </div>
-                  
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">Python & Libraries</span>
-                    <span className="text-blue-600 font-semibold">80%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div className="bg-blue-600 h-2 rounded-full" style={{ width: '80%' }}></div>
-                  </div>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Machine Learning</span>
+                  <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Data Analysis</span>
+                  <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">scikit-learn</span>
+                  <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Pandas</span>
+                  <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Matplotlib</span>
+                  <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Cytoscape</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Additional Skills Row */}
+            <div className="grid md:grid-cols-2 gap-8 mt-6">
+              <div className="space-y-4 bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-lg font-semibold text-gray-900 flex items-center gap-2 border-b border-gray-200 pb-2">
+                  <Zap className="text-blue-600" size={24} />
+                  Tools & Technologies
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">MySQL</span>
+                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Git</span>
+                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Docker</span>
+                  <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">PostgreSQL</span>
+                  <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Maven</span>
+                  <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Postman</span>
+                  <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Swagger</span>
+                </div>
+              </div>
+
+              <div className="space-y-4 bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-lg font-semibold text-gray-900 flex items-center gap-2 border-b border-gray-200 pb-2">
+                  <Shield className="text-blue-600" size={24} />
+                  Development Practices
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">Agile/Scrum</span>
+                  <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">TDD</span>
+                  <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">JUnit Testing</span>
+                  <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Mockito</span>
+                  <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Code Review</span>
+                  <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">API Documentation</span>
                 </div>
               </div>
             </div>

@@ -502,19 +502,6 @@ section {
     box-shadow: var(--shadow-sm);
 }
 
-/* Highlight primary skills */
-.skill-tag:nth-child(-n+3) {
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
-    color: var(--accent-color);
-    border-color: var(--accent-color);
-    font-weight: 700;
-}
-
-.skill-tag:nth-child(-n+3):hover {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-    color: var(--white);
-    border-color: var(--primary-color);
-}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
